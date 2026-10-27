@@ -1,5 +1,6 @@
 import { AnalysisResult } from '../types/jobshield.ts';
 import { SAMPLE_JOB_POSTINGS } from '../data/sample_postings.ts';
+import { analyzeJobPosting } from '../ml/engine.ts';
 
 const PREFIX = 'jobshield_history_';
 
@@ -76,12 +77,15 @@ export function clearLocalHistory(userEmailOrId: string | null | undefined): voi
  */
 export function seedSampleHistory(userEmailOrId: string | null | undefined): AnalysisResult[] {
   const current = getLocalHistory(userEmailOrId);
-  const sampleItems: AnalysisResult[] = SAMPLE_JOB_POSTINGS.slice(0, 3).map((sample, idx) => ({
-    ...sample,
-    id: `seed-demo-${Date.now()}-${idx}`,
-    timestamp: new Date(Date.now() - idx * 86400000 * 1.5).toISOString(),
-    userId: userEmailOrId || 'guest'
-  }));
+  const sampleItems: AnalysisResult[] = SAMPLE_JOB_POSTINGS.slice(0, 3).map((sample, idx) => {
+    const analysis = analyzeJobPosting(sample.submission);
+    return {
+      ...analysis,
+      id: `seed-demo-${Date.now()}-${idx}`,
+      timestamp: new Date(Date.now() - idx * 86400000 * 1.5).toISOString(),
+      userId: userEmailOrId || 'guest'
+    };
+  });
 
   // Merge sample items without duplicates
   const existingIds = new Set(current.map(c => c.submission?.title));
