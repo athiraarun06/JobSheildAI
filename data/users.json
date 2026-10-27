@@ -1,0 +1,23 @@
+[
+  {
+    "id": "usr_1792845411822_b922d80f",
+    "name": "Alex Rivers",
+    "email": "alex@example.com",
+    "passwordHash": "083d5da635b8433d8eeb62b76718fe4c:63aa051686de63f21694b41b0ba361060c70e632cb83bc5a7ab218abdbe476520a6514133f7377c492f401ba34febfff1b509d34b7c5659075ecace86b48dd58",
+    "createdAt": "2026-10-24T12:36:51.914Z"
+  },
+  {
+    "id": "usr_1792848319474_9747d4d2",
+    "name": "Alice Security",
+    "email": "alice_1792848319469@test.com",
+    "passwordHash": "4056be5c928d9bea7ba115ec5a92d1e0:c88ed63cdd5d7369eeeefbd613523b7dd452a7229a0a15ecc666b4c061b95728455dcd0c48900c7c1e395ed980cd2713473c0929bb0c77063533adbb3d06b34f",
+    "createdAt": "2026-10-24T13:25:19.569Z"
+  },
+  {
+    "id": "usr_1792848319617_75a3d901",
+    "name": "Bob Auditor",
+    "email": "bob_1792848319612@test.com",
+    "passwordHash": "35b8568303ad53b12b583e7d45f2281e:0905a81c6f19c5d884a3ab78170a37b61779559c8574965d1973e1e44a9c0533e0f0ad3fc90332c789af0ca75c349b76b439534fe50828618485d382e6ea3972",
+    "createdAt": "2026-10-24T13:25:19.702Z"
+  }
+]

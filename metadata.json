@@ -1,0 +1,6 @@
+{
+  "name": "JobShield AI — Explainable Job Scam Detection & Risk Intelligence",
+  "description": "Data science and machine learning system for detecting recruitment fraud, calculating calibrated scam risk scores, explaining suspicious factors with feature attribution, and identifying cross-posting scam patterns.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

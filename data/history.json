@@ -1,0 +1,255 @@
+[
+  {
+    "id": "analysis-1792848319464",
+    "submission": {
+      "title": "Data Entry Operator",
+      "company": "Test Co",
+      "description": "Simple data entry work from home. Urgent requirement for entry level candidates.",
+      "requiresPayment": false
+    },
+    "timestamp": "2026-10-24T13:25:19.464Z",
+    "riskScore": 11,
+    "riskCategory": "low",
+    "modelProbability": 0.042,
+    "calibratedScore": 11,
+    "isCalibrated": true,
+    "warningSigns": [
+      {
+        "id": "sign-vague-text",
+        "category": "vague_text",
+        "title": "Extremely Vague Job Description",
+        "severity": "medium",
+        "evidence": "Description contains only 12 words and lacks concrete day-to-day duties, team structure, or required qualifications.",
+        "explanation": "Fraudulent listings frequently use generic boilerplate to cast the widest net while omitting verifiable operational specifics.",
+        "contributionScore": 10,
+        "recommendation": "Ask the recruiter for a comprehensive written job specification and organizational chart."
+      },
+      {
+        "id": "sign-missing-employer-info",
+        "category": "company_verification",
+        "title": "No Verifiable Employer Website or Official Contact",
+        "severity": "medium",
+        "evidence": "No employer website or verifiable email address was provided with the posting.",
+        "explanation": "Legitimate companies almost always maintain an established web presence or official domain email.",
+        "contributionScore": 8,
+        "recommendation": "Research the company on corporate registry databases (e.g. OpenCorporates, Secretary of State) and official web domains."
+      }
+    ],
+    "featureContributions": [],
+    "recommendations": [
+      "Search the company on corporate registries (e.g. MCA21 portal in India or official LinkedIn company page) to verify operational legitimacy.",
+      "Never share Aadhaar, PAN card, banking OTPs, or passport copies before verifying a formal offer letter."
+    ],
+    "similarPostings": [],
+    "heuristicFlagsCount": 2,
+    "modelVersion": "EMSCAD-LogReg-TFIDF-v1.2",
+    "summaryVerdict": "LOW RISK: The posting exhibits standard professional recruitment language and legitimate employment characteristics. Standard job-seeker diligence still applies.",
+    "userId": "guest"
+  },
+  {
+    "id": "analysis-1792847165427",
+    "submission": {
+      "title": "Remote Typist",
+      "company": "FastCash Info",
+      "description": "Urgently hiring remote data entry typists. No experience needed. Contact via Telegram @FastCashRecruiter. Selected candidates must transfer ₹8,500 security kit deposit via UPI PhonePe.",
+      "salary": "₹50,000 / month",
+      "workArrangement": "remote",
+      "requiresPayment": true,
+      "paymentDetails": "₹8,500 deposit via PhonePe"
+    },
+    "timestamp": "2026-10-24T13:06:05.427Z",
+    "riskScore": 99,
+    "riskCategory": "very_high",
+    "modelProbability": 1,
+    "calibratedScore": 99,
+    "isCalibrated": true,
+    "warningSigns": [
+      {
+        "id": "sign-payment",
+        "category": "payment",
+        "title": "Upfront Candidate Payment or Deposit Requested",
+        "severity": "critical",
+        "evidence": "Explicitly marked as requiring payment (₹8,500 deposit via PhonePe). Text mentions: \"deposit\"",
+        "explanation": "Legitimate employers cover recruitment, background verification, and equipment costs. Demanding candidate deposits (via UPI, cash, or wire transfer) is the #1 indicator of employment fraud according to consumer protection regulators.",
+        "contributionScore": 35,
+        "recommendation": "Cease communication immediately if asked to send money via UPI (Google Pay, PhonePe, Paytm) or bank transfer. Legitimate employers never charge candidates."
+      },
+      {
+        "id": "sign-contact-app",
+        "category": "contact",
+        "title": "Informal / Encrypted Messaging Interview",
+        "severity": "high",
+        "evidence": "Recruitment directs candidates to communicate via messaging platforms (Telegram / WhatsApp mentioned in description).",
+        "explanation": "Scammers avoid traceable corporate email servers and telephone networks by conducting fake interviews solely through encrypted chat apps with anonymous accounts.",
+        "contributionScore": 22,
+        "recommendation": "Request a formal video interview via corporate enterprise software (e.g. Google Meet, Zoom) with an official corporate email invitation."
+      },
+      {
+        "id": "sign-vague-text",
+        "category": "vague_text",
+        "title": "Extremely Vague Job Description",
+        "severity": "medium",
+        "evidence": "Description contains only 24 words and lacks concrete day-to-day duties, team structure, or required qualifications.",
+        "explanation": "Fraudulent listings frequently use generic boilerplate to cast the widest net while omitting verifiable operational specifics.",
+        "contributionScore": 10,
+        "recommendation": "Ask the recruiter for a comprehensive written job specification and organizational chart."
+      },
+      {
+        "id": "sign-missing-employer-info",
+        "category": "company_verification",
+        "title": "No Verifiable Employer Website or Official Contact",
+        "severity": "medium",
+        "evidence": "No employer website or verifiable email address was provided with the posting.",
+        "explanation": "Legitimate companies almost always maintain an established web presence or official domain email.",
+        "contributionScore": 8,
+        "recommendation": "Research the company on corporate registry databases (e.g. OpenCorporates, Secretary of State) and official web domains."
+      }
+    ],
+    "featureContributions": [
+      {
+        "feature": "Requires upfront payment",
+        "value": 3.5,
+        "type": "structured_field",
+        "label": "Explicit candidate payment requested",
+        "direction": "scam_indicator"
+      },
+      {
+        "feature": "telegram",
+        "value": 3.45,
+        "type": "text_ngram",
+        "label": "Scam indicator term: \"telegram\"",
+        "direction": "scam_indicator"
+      },
+      {
+        "feature": "data entry typist",
+        "value": 2.72,
+        "type": "text_ngram",
+        "label": "Scam indicator term: \"data entry typist\"",
+        "direction": "scam_indicator"
+      },
+      {
+        "feature": "urgently hiring",
+        "value": 2.65,
+        "type": "text_ngram",
+        "label": "Scam indicator term: \"urgently hiring\"",
+        "direction": "scam_indicator"
+      },
+      {
+        "feature": "Telecommuting/Remote",
+        "value": 0.8,
+        "type": "structured_field",
+        "label": "Remote work arrangement (higher baseline vulnerability in EMSCAD)",
+        "direction": "scam_indicator"
+      }
+    ],
+    "recommendations": [
+      "Do NOT send any money, UPI transfers, or registration fees. Legitimate recruitment in India and globally is 100% free for candidates.",
+      "Decline chat-only interviews conducted over Telegram or WhatsApp. Insist on a formal video conference with an official corporate email calendar invitation.",
+      "Search the company on corporate registries (e.g. MCA21 portal in India or official LinkedIn company page) to verify operational legitimacy.",
+      "Never share Aadhaar, PAN card, banking OTPs, or passport copies before verifying a formal offer letter."
+    ],
+    "similarPostings": [],
+    "heuristicFlagsCount": 4,
+    "modelVersion": "EMSCAD-LogReg-TFIDF-v1.2",
+    "summaryVerdict": "CRITICAL ALERT: This posting displays strong, corroborated markers of recruitment fraud. Immediate caution is advised.",
+    "userId": "guest"
+  },
+  {
+    "id": "analysis-1792845421586",
+    "submission": {
+      "title": "Remote Data Entry Associate",
+      "company": "Apex Global Logistics LLC",
+      "description": "Urgent requirement for remote data entry associates. Earn $45/hour from home. No experience needed. Must purchase standard home workstation configuration kit ($250 refundable deposit via Wire/Zelle) before orientation. Send resume to hr-apex@gmail.com.",
+      "salary": "$45/hr",
+      "location": "Remote",
+      "workArrangement": "remote",
+      "employerWebsite": "",
+      "contactEmail": "hr-apex@gmail.com",
+      "requiresPayment": true
+    },
+    "timestamp": "2026-10-24T12:37:01.586Z",
+    "riskScore": 98,
+    "riskCategory": "very_high",
+    "modelProbability": 0.966,
+    "calibratedScore": 98,
+    "isCalibrated": true,
+    "warningSigns": [
+      {
+        "id": "sign-payment",
+        "category": "payment",
+        "title": "Upfront Candidate Payment or Deposit Requested",
+        "severity": "critical",
+        "evidence": "Explicitly marked as requiring payment (Registration/Equipment fee). Text mentions: \"deposit\"",
+        "explanation": "Legitimate employers cover recruitment, background check, and training costs. Demanding candidate deposits or equipment purchases is the #1 indicator of employment scams according to the FTC.",
+        "contributionScore": 35,
+        "recommendation": "Cease communication immediately if asked to send money, buy gift cards, or transfer crypto. Legitimate employers never charge candidates."
+      },
+      {
+        "id": "sign-free-email",
+        "category": "contact",
+        "title": "Personal Email Used for Corporate Recruitment",
+        "severity": "high",
+        "evidence": "Contact email \"hr-apex@gmail.com\" uses free provider @gmail.com rather than an official domain matching \"Apex Global Logistics LLC\".",
+        "explanation": "Established organizations utilize proprietary corporate email domains (e.g. hr@company.com). Free email addresses are frequently used by impersonators pretending to be corporate recruiters.",
+        "contributionScore": 18,
+        "recommendation": "Search for the recruiter on LinkedIn or visit the company official careers page to verify if this email address is legitimate."
+      },
+      {
+        "id": "sign-salary-anomaly",
+        "category": "salary",
+        "title": "Disproportionately High Compensation for Entry-Level Role",
+        "severity": "high",
+        "evidence": "Advertised pay ($45/hr) is significantly above industry benchmarks for entry-level or no-experience positions.",
+        "explanation": "Scammers offer inflated wages (e.g. $45–$65/hr for basic data entry or typing) as an emotional hook to attract urgent, uncritical applicants.",
+        "contributionScore": 18,
+        "recommendation": "Compare the offered salary against trusted compensation benchmarks (e.g., Glassdoor, Bureau of Labor Statistics) for this specific job title."
+      },
+      {
+        "id": "sign-vague-text",
+        "category": "vague_text",
+        "title": "Extremely Vague Job Description",
+        "severity": "medium",
+        "evidence": "Description contains only 32 words and lacks concrete day-to-day duties, team structure, or required qualifications.",
+        "explanation": "Fraudulent listings frequently use generic boilerplate to cast the widest net while omitting verifiable operational specifics.",
+        "contributionScore": 10,
+        "recommendation": "Ask the recruiter for a comprehensive written job specification and organizational chart."
+      }
+    ],
+    "featureContributions": [
+      {
+        "feature": "Requires upfront payment",
+        "value": 3.5,
+        "type": "structured_field",
+        "label": "Explicit candidate payment requested",
+        "direction": "scam_indicator"
+      },
+      {
+        "feature": "zelle",
+        "value": 3.48,
+        "type": "text_ngram",
+        "label": "Scam indicator term: \"zelle\"",
+        "direction": "scam_indicator"
+      },
+      {
+        "feature": "Telecommuting/Remote",
+        "value": 0.8,
+        "type": "structured_field",
+        "label": "Remote work arrangement (higher baseline vulnerability in EMSCAD)",
+        "direction": "scam_indicator"
+      }
+    ],
+    "recommendations": [
+      "Do NOT send any money, checks, or cryptocurrency. Legitimate recruitment is free for candidates.",
+      "Independently locate the official website for \"Apex Global Logistics LLC\" and confirm whether recruiters contact from corporate domains.",
+      "Decline chat-only interviews conducted over Telegram or WhatsApp. Request a video conference with a verified corporate email calendar invite.",
+      "Verify prevailing market salary standards for this position on Glassdoor, Indeed, or the Bureau of Labor Statistics.",
+      "Search the exact job title and company name on LinkedIn to ensure the position and hiring manager actually exist.",
+      "Never disclose your Social Security Number, banking routing credentials, or passport scans before signing a formal offer letter."
+    ],
+    "similarPostings": [],
+    "heuristicFlagsCount": 4,
+    "modelVersion": "EMSCAD-LogReg-TFIDF-v1.2",
+    "summaryVerdict": "CRITICAL ALERT: This posting displays strong, corroborated markers of recruitment fraud. Immediate caution is advised.",
+    "userId": "usr_1792845411822_b922d80f"
+  }
+]
